@@ -674,15 +674,335 @@
             50% { transform: scale(1.05); }
         }
 
-        /* Responsive */
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+        }
+
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 3rem; }
-            .about-content { grid-template-columns: 1fr; gap: 3rem; }
-            .timeline-item { padding-left: 60px; }
-            .contact-grid { grid-template-columns: 1fr; }
-            .cta-buttons { flex-direction: column; align-items: center; }
-            section { padding: 80px 0; }
+            .container {
+                padding: 0 15px;
+            }
+
+            /* Header adjustments */
+            nav {
+                padding: 1rem 0;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            /* Hero section mobile */
+            .hero {
+                height: 100vh;
+                padding: 0 20px;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+                padding: 0 10px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+                padding: 18px 24px;
+                font-size: 1rem;
+            }
+
+            /* Sections mobile */
+            section {
+                padding: 80px 0;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+                margin-bottom: 3rem;
+            }
+
+            /* About section mobile */
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .about-text {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+
+            .education-item, .certification-list {
+                padding: 2rem;
+            }
+
+            /* Skills mobile */
+            .skills-section {
+                margin-top: 3rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 1rem;
+            }
+
+            .skill-item {
+                padding: 1.5rem 1rem;
+            }
+
+            .skill-icon {
+                font-size: 2rem;
+                margin-bottom: 0.8rem;
+            }
+
+            /* Timeline mobile */
+            .experience-timeline {
+                max-width: 100%;
+            }
+
+            .timeline-line, .timeline-progress {
+                left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 50px;
+                margin: 3rem 0;
+            }
+
+            .timeline-dot {
+                left: 12px;
+                width: 12px;
+                height: 12px;
+                border-width: 3px;
+            }
+
+            .timeline-content {
+                padding: 2rem;
+                margin-right: 10px;
+            }
+
+            .job-title {
+                font-size: 1.3rem;
+            }
+
+            .job-company {
+                font-size: 1rem;
+            }
+
+            .job-description {
+                font-size: 0.95rem;
+            }
+
+            .job-description ul {
+                margin-left: 1rem;
+            }
+
+            /* Project card mobile */
+            .project-card {
+                margin: 0 10px;
+                max-width: none;
+            }
+
+            .project-header {
+                height: 180px;
+            }
+
+            .project-icon {
+                font-size: 3.5rem;
+            }
+
+            .project-content {
+                padding: 2rem;
+            }
+
+            .project-title {
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+
+            .project-description {
+                font-size: 0.95rem;
+                margin-bottom: 2rem;
+            }
+
+            .project-tags {
+                gap: 0.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .tag {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            /* Contact mobile */
+            .contact-description {
+                font-size: 1.1rem;
+                margin-bottom: 3rem;
+                padding: 0 10px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-top: 3rem;
+            }
+
+            .contact-item {
+                padding: 2rem 1.5rem;
+            }
+
+            .contact-icon {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            /* SQL code mobile - hide some for cleaner look */
+            .sql-code {
+                font-size: 11px;
+            }
+
+            .sql-3, .sql-4 {
+                display: none;
+            }
+
+            /* Floating dots - reduce for mobile */
+            .floating-dot:nth-child(n+5) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            /* Even smaller screens */
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .about-text {
+                font-size: 0.95rem;
+            }
+
+            .education-item, .certification-list {
+                padding: 1.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .timeline-content {
+                padding: 1.5rem;
+            }
+
+            .project-content {
+                padding: 1.5rem;
+            }
+
+            .contact-item {
+                padding: 1.5rem;
+            }
+
+            /* Hide more SQL code on very small screens */
+            .sql-2, .sql-5 {
+                display: none;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .skill-item:hover,
+            .contact-item:hover,
+            .education-item:hover,
+            .certification-list:hover,
+            .timeline-content:hover,
+            .project-card:hover {
+                transform: none;
+                box-shadow: inherit;
+            }
+
+            .skill-item:active,
+            .contact-item:active,
+            .cta-button:active {
+                transform: scale(0.98);
+            }
+
+            .project-card {
+                transform: none !important;
+            }
+        }
+
+        /* Landscape phone optimization */
+        @media screen and (max-height: 500px) and (orientation: landscape) {
+            .hero {
+                height: auto;
+                min-height: 100vh;
+                padding: 100px 20px 50px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
         }
     </style>
 </head>
@@ -964,9 +1284,81 @@
             });
         }, observerOptions);
 
-        // Observe elements
+        // Enhanced mobile-friendly JavaScript
+        
+        // Touch-friendly navigation
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            // Disable some animations on mobile for better performance
+            document.querySelectorAll('.floating-dot').forEach(function(dot, index) {
+                if (index > 3) {
+                    dot.style.display = 'none';
+                }
+            });
+            
+            // Simplify hover effects for touch devices
+            document.querySelectorAll('.skill-item, .contact-item').forEach(function(item) {
+                item.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.98)';
+                });
+                
+                item.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        }
+
+        // Improved mobile scroll handling
+        var ticking = false;
+        function updateOnScroll() {
+            var header = document.querySelector('header');
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 8px 40px rgba(0,0,0,0.12)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.08)';
+            }
+            
+            // Only hide header on desktop
+            if (window.innerWidth > 768) {
+                if (scrollTop > lastScrollTop && scrollTop > 150) {
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    header.style.transform = 'translateY(0)';
+                }
+            }
+            lastScrollTop = scrollTop;
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(updateOnScroll);
+                ticking = true;
+            }
+        });
+
+        // Mobile-optimized intersection observer
+        var mobileObserverOptions = {
+            threshold: window.innerWidth <= 768 ? 0.1 : 0.15,
+            rootMargin: window.innerWidth <= 768 ? '0px 0px -30px 0px' : '0px 0px -50px 0px'
+        };
+
+        var mobileObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, mobileObserverOptions);
+
+        // Re-observe with mobile settings
         document.querySelectorAll('.section-title, .about-text, .education-certifications, .timeline-item, .project-card').forEach(function(el) {
-            observer.observe(el);
+            mobileObserver.observe(el);
         });
 
         // Skill items with staggered animation
